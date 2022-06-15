@@ -3,7 +3,7 @@ FROM alpine:3.4
 EXPOSE 8080
 
 RUN apk add --update go git && \
-  go version
+  go version && \
   mkdir -p /tmp/gotty && \
   mkdir -p /usr/local/go && \
   export GOROOT=/usr/local/go && \
