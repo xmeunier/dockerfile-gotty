@@ -1,8 +1,8 @@
-FROM alpine:3.4
+FROM golang:alpine
 
 EXPOSE 8080
 
-RUN apk add --update go git && \
+RUN apk add --update git && \
   go version && \
   which go && \
   export -p && \
