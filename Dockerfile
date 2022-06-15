@@ -4,7 +4,7 @@ EXPOSE 8080
 
 RUN apk add --update go git && \
   mkdir -p /tmp/gotty && \
-  export GOROOT=/usr/local/go && \
+  export GOROOT=/tmp/gotty && \
   GOPATH=/tmp/gotty go get github.com/yudai/gotty && \
   mv /tmp/gotty/bin/gotty /usr/local/bin/ && \
   apk del go git && \
