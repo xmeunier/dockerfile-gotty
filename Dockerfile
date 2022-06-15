@@ -6,6 +6,7 @@ RUN apk add --update go git && \
   go version && \
   export GOPATH=/usr/local/go &&\
   go get github.com/yudai/gotty && \
+  which go && \
   export PATH=$PATH:$GOPATH/bin && \
   apk del go git && \
   rm -rf /var/cache/apk/*
