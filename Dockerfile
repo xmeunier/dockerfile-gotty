@@ -6,7 +6,7 @@ RUN apk add --update git && \
   go version && \
   which go && \
   export -p && \
-  export GOPATH=/usr/local/go &&\
+  go mod init && \
   go get github.com/yudai/gotty && \
   export PATH=$PATH:$GOPATH/bin && \
   apk del go git && \
